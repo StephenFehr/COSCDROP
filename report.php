@@ -22,7 +22,7 @@ $col = array("fname", "lname", "id", "email", "phone");
 $numcol = count($col);
 
 //connect to server and select database
-$mysqli = mysqli_connect("localhost", "cs213user", "letmein", $DBName);
+$mysqli = mysqli_connect("localhost", "coscdrop", "letmein", $DBName);
 
 //create and issue the query
 $targetfname = filter_input(INPUT_POST, 'fname');
