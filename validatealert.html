@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+<style>
+body{background-color:bisque;}
+</style>
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }else{
+	alert("It works!");
+ }
+}
+</script>
+</head>
+<body>
+<h1>Back to <a href="index.html"><strong>Home</strong></a></h1>
+<h2>JavaScript Validation With AlertBox</h2>
+
+<form name="myForm" onsubmit="return validateForm()" method="post">
+  Name: <input type="text" name="fname">
+  <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
