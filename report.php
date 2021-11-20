@@ -13,6 +13,7 @@
      	</style>
 	</head>
 	<body>
+		<h1>Back to <a href="index.html"><strong>Home</strong></a></h1>
 	<?php 		
 
 $DBName = "coscdrop";
