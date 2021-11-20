@@ -35,7 +35,7 @@ if (!$conn) {
 
 	    
 $sql = "INSERT INTO $tablename (fname, lname, email)
-VALUES ($targetfname, $targetlname, $targetemail)";
+VALUES ('.$targetfname.', '.$targetlname.', '.$targetemail.')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
