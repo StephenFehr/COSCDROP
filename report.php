@@ -14,7 +14,6 @@
 	</head>
 	<body>
 	<?php 		
-		session_start();
 
 $DBName = "coscdrop";
 $TableName = "users";
