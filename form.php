@@ -42,6 +42,7 @@ if (mysqli_query($conn, $sql)) {
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
+	    echo "
 	<table>
 		  <tr>
 			<th>First name</th>
@@ -53,7 +54,7 @@ if (mysqli_query($conn, $sql)) {
 			<td>$targetlname</td>
 			<td>$targetlname</td>
 		  </tr>
-		</table>
+		</table>";
 	    
 	    
 mysqli_close($conn);
