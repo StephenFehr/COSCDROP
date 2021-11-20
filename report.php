@@ -43,15 +43,14 @@ if (mysqli_num_rows($result) < 1) {
 	echo "<table><tr>";
 	for ($i = 0; $i < count($col); $i++) 
 		echo "<th>" . $col[$i];
-        
-    	while ($row = mysqli_fetch_array($result)) {
-
         echo "</tr>";
+
+    	while ($row = mysqli_fetch_array($result)) {
         for ($i = 0; $i < count($col); $i++) {
             echo"<td>" . $row[$i];
         }
         echo "</tr>";
-	}
+	
     } //while   
 }
 
