@@ -25,6 +25,7 @@ $tablename = "users";
 $targetfname = filter_input(INPUT_POST, 'fname');
 $targetlname = filter_input(INPUT_POST, 'lname');
 $targetemail = filter_input(INPUT_POST, 'email');
+$targetphone = filter_input(INPUT_POST, 'phone');
 	    
 
 // Create connection
@@ -35,8 +36,8 @@ if (!$conn) {
 }
 
 	    
-$sql = "INSERT INTO $tablename (fname, lname, email)
-VALUES ('$targetfname', '$targetlname', '$targetemail')";
+$sql = "INSERT INTO $tablename (fname, lname, email,phone)
+VALUES ('$targetfname', '$targetlname', '$targetemail', '$targetphone')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
@@ -49,11 +50,14 @@ if (mysqli_query($conn, $sql)) {
 			<th>First name</th>
 			<th>Last name</th>
 			<th>Email</th>
+			<th>Phone</th>
+			
 		  </tr>
 		  <tr>
 			<td>$targetfname</td>
 			<td>$targetlname</td>
 			<td>$targetemail </td>
+			<td>$targetphone </td>
 		  </tr>
 		</table>";
 	    
