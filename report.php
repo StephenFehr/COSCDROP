@@ -18,7 +18,7 @@
 
 $DBName = "coscdrop";
 $TableName = "users";
-$col = array("fname", "lname", "id", "email", "phone");
+$col = array("fname", "lname", "id", "email");
 $numcol = count($col);
 
 //connect to server and select database
