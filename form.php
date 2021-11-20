@@ -17,49 +17,29 @@ New record created successfully
 		
 session_start();
 
-$DBName = "coscdrop";
-$TableName = "users";
-$col = array("fname", "lname", "id", "email");
-$numcol = count($col);
+<?php
+$servername = "localhost";
+$username = "coscdrop";
+$password = "letmein";
+$tablename = "users";
 
-//connect to server and select database
-$mysqli = mysqli_connect("localhost", "coscdrop", "letmein", $DBName);
-
-//create and issue the query
-$targetname = filter_input(INPUT_POST, 'username');
-
-$sql = "SELECT * FROM " . $TableName . " WHERE name = '" . $targetname . "'";
-
-$result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
-
-//get the number of rows in the result set; should be 1 if a match
-if (mysqli_num_rows($result) < 1) {
-    //echo "not enough";
-    header("Location: Index.php");
-} else {
-
-
-    echo "<html>
-        <head>
-        <link rel='stylesheet' href='Birthday.css'>
-        <title>Happy Birthday</title>
-        </head>
-        <body style='background-color:bisque'>";
-
-    echo "<h2> User Information: </h2>";
-
-    while ($row = mysqli_fetch_array($result)) {
-        echo "<table><tr>";
-        for ($i = 0; $i < count($col); $i++) {
-            echo "<th>" . $col[$i];
-        }
-        echo "</tr>";
-        for ($i = 0; $i < count($col); $i++) {
-            echo"<td>" . $row[$i];
-        }
-        echo "</tr>";
-    } //while   
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
 }
+
+$sql = "INSERT INTO $tablename (fname, lname, email)
+VALUES ('John', 'Doe', 'john@example.com')";
+
+if (mysqli_query($conn, $sql)) {
+  echo "New record created successfully";
+} else {
+  echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
 ?>
       
       
