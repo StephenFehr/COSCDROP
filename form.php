@@ -13,9 +13,9 @@
             }
         </style>
     </head>
-    <body>
+    <body>    /*
 	<?php
-	    /*
+	
 $servername = "localhost";
 $username = "coscdrop";
 $password = "letmein";
