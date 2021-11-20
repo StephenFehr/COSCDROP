@@ -15,7 +15,7 @@
     </head>
     <body>
 		
-session_start();
+
 
 <?php
 $servername = "localhost";
