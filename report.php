@@ -41,8 +41,8 @@ if (mysqli_num_rows($result) < 1) {
     echo "<h2> User Information: </h2>";
         
 	echo "<table><tr>";
-	for ($i = 0; $i < count($col); $i++) 
-		echo "<th>" . $col[$i];
+	for ($i = 0; $i < count($col); $i++) {
+		echo "<th>" . $col[$i];}
         echo "</tr>";
 
     	while ($row = mysqli_fetch_array($result)) {
@@ -52,6 +52,7 @@ if (mysqli_num_rows($result) < 1) {
         echo "</tr>";
 	
     } //while   
+	echo "</table>";
 }
 
 	?>
