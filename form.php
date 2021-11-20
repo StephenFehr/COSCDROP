@@ -53,7 +53,7 @@ if (mysqli_query($conn, $sql)) {
 		  <tr>
 			<td>$targetfname</td>
 			<td>$targetlname</td>
-			<td>targetemail </td>
+			<td>$targetemail </td>
 		  </tr>
 		</table>";
 	    
