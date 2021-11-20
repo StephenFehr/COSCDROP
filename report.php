@@ -29,7 +29,7 @@ $targetfname = filter_input(INPUT_POST, 'fname');
 $targetlname = filter_input(INPUT_POST, 'lname');
 $targetemail = filter_input(INPUT_POST, 'email');
 
-$sql = "SELECT * FROM " . $TableName . "'";
+$sql = "SELECT * FROM " . $TableName;
 
 $result = mysqli_query($mysqli, $sql) or die(mysqli_error($mysqli));
 
