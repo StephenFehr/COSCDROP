@@ -15,6 +15,7 @@
     </head>
     <body>
 	<?php
+	    /*
 $servername = "localhost";
 $username = "coscdrop";
 $password = "letmein";
@@ -23,7 +24,7 @@ $tablename = "users";
 $targetfname = filter_input(INPUT_POST, 'fname');
 $targetlname = filter_input(INPUT_POST, 'lname');
 $targetemail = filter_input(INPUT_POST, 'email');
-/*	    
+	    
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
