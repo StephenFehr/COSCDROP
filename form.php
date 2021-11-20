@@ -65,9 +65,6 @@ if (mysqli_query($conn, $sql)) {
 mysqli_close($conn);
 ?>
 
- 
-
-
 		<a href="report.php">Print out report of database</a></br>
 		<a href="index.html"><strong>Home</strong></a>
     </body>
