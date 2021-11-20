@@ -17,7 +17,7 @@
 		session_start();
 
 $DBName = "coscdrop";
-$TableName = "user";
+$TableName = "users";
 $col = array("fname", "lname", "id", "email", "phone");
 $numcol = count($col);
 
