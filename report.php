@@ -18,7 +18,7 @@
 
 $DBName = "coscdrop";
 $TableName = "users";
-$col = array("fname", "lname", "id", "email");
+$col = array("fname", "lname", "id", "email","phone");
 $numcol = count($col);
 
 //connect to server and select database
@@ -28,6 +28,7 @@ $mysqli = mysqli_connect("localhost", "coscdrop", "letmein", $DBName);
 $targetfname = filter_input(INPUT_POST, 'fname');
 $targetlname = filter_input(INPUT_POST, 'lname');
 $targetemail = filter_input(INPUT_POST, 'email');
+$targetphone = filter_input(INPUT_POST, 'phone');
 
 $sql = "SELECT * FROM " . $TableName;
 
@@ -42,7 +43,7 @@ if (mysqli_num_rows($result) < 1) {
     echo "<h2> User Information: </h2>";
         
 	echo "<table><tr>";
-	for ($i = 0; $i < count($col); $i++) {
+	for ($i = 0; $i < $numcol; $i++) {
 		echo "<th>" . $col[$i];}
         echo "</tr>";
 
