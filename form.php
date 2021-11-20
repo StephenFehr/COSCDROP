@@ -1,4 +1,4 @@
-New record created successfully
+
 <html>
     <head>
         <title>New User Input</title>
@@ -22,6 +22,10 @@ $servername = "localhost";
 $username = "coscdrop";
 $password = "letmein";
 $tablename = "users";
+	    
+$targetfname = filter_input(INPUT_POST, 'fname');
+$targetlname = filter_input(INPUT_POST, 'lname');
+$targetemail = filter_input(INPUT_POST, 'email');
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -31,14 +35,27 @@ if (!$conn) {
 }
 
 $sql = "INSERT INTO $tablename (fname, lname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
+VALUES ($targetfname, $targetlname, $targetemail)";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-
+	<table>
+		  <tr>
+			<th>First name</th>
+			<th>Last name</th>
+			<th>Email</th>
+		  </tr>
+		  <tr>
+			<td>$targetfname</td>
+			<td>$targetlname</td>
+			<td>$targetlname</td>
+		  </tr>
+		</table>
+	    
+	    
 mysqli_close($conn);
 ?>
       
