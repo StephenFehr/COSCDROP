@@ -23,6 +23,7 @@
 $servername = "localhost";
 $username = "coscdrop";
 $password = "letmein";
+$dbname = "coscdrop";
 $tablename = "users";
 	    
 $targetfname = filter_input(INPUT_POST, 'fname');
