@@ -39,17 +39,19 @@ if (mysqli_num_rows($result) < 1) {
 } else {
 
     echo "<h2> User Information: </h2>";
+        
+	echo "<table><tr>";
+	for ($i = 0; $i < count($col); $i++) 
+		echo "<th>" . $col[$i];
+        
+    	while ($row = mysqli_fetch_array($result)) {
 
-    while ($row = mysqli_fetch_array($result)) {
-        echo "<table><tr>";
-        for ($i = 0; $i < count($col); $i++) {
-            echo "<th>" . $col[$i];
-        }
         echo "</tr>";
         for ($i = 0; $i < count($col); $i++) {
             echo"<td>" . $row[$i];
         }
         echo "</tr>";
+	}
     } //while   
 }
 
