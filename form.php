@@ -13,8 +13,12 @@
             }
         </style>
     </head>
-    <body>    /*
-	<?php
+    <body>  
+    </body>
+</html>
+
+	    
+<?php
 	
 $servername = "localhost";
 $username = "coscdrop";
@@ -60,6 +64,4 @@ mysqli_close($conn);
 ?>
 		<a href="report.php">Print out report of database</a></br>
 		<a href="index.html"><strong>Home</strong></a>
-*/
-    </body>
-</html>
+
