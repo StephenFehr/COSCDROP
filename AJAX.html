@@ -38,7 +38,7 @@
 				
 				var xhttp = new XMLHttpRequest();
 				var url = 'form.php';
-				var params = "fname=".fname."&lname=".lname."&email=".email";
+				var params = "fname="+fname+"&lname="+lname+"&email="+email";
 				xhttp.open("POST", url, true);
 				
 				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
