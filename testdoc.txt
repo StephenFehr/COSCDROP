@@ -1,1 +1,1 @@
-This infomration is from a file called testdoc.txt. It's being retrieved via AJAX!
+This data is from a file called testdoc.txt. It's being retrieved via AJAX!
