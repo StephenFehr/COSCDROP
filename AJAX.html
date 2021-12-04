@@ -32,6 +32,10 @@
 			  xhttp.send();
 			}
 			function loadPostDoc(fname, lname, email) {
+				var fname = fname;
+				var lname = lname;
+				var email = email;
+				
 				var xhttp = new XMLHttpRequest();
 				var url = 'form.php';
 				var params = "fname=".fname."&lname=".lname."&email=".email";
