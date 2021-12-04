@@ -34,7 +34,7 @@
 			function loadPostDoc() {
 				var xhttp = new XMLHttpRequest();
 				var url = 'form.php';
-				var params = "fname=first&lname=last&email=email@mail";
+				var params = "fname='fname'&lname='lname'&email='email'";
 				xhttp.open("POST", url, true);
 				
 				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -65,11 +65,11 @@
 		<h2>AJAX using POST method</h2>
 
 		<label for="fname">First name:</label><br>
-		<input type="text" name="fname"><br>
+		<input type="text" name="fname" id="fname"><br>
 		<label for="lname">Last name:</label><br>
-		<input type="text" name="lname"><br>
+		<input type="text" name="lname" id="lname"><br>
 		<label for="email">Email:</label><br>
-		<input type="email" name="email" required=""><br>
+		<input type="email" name="email" id="email" required=""><br>
 
 		<button type="button" onclick="loadPostDoc()">Request data with POST</button>
     
