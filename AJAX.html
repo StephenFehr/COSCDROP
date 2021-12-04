@@ -31,10 +31,10 @@
 			  xhttp.open("GET", "testdoc.txt", true);
 			  xhttp.send();
 			}
-			function loadPostDoc(data) {
+			function loadPostDoc(fname, lname, email) {
 				var xhttp = new XMLHttpRequest();
 				var url = 'form.php';
-				var params = "fname=".data[0]."&lname=".data[1]."&email=".data[2];
+				var params = "fname=".fname."&lname=".lname."&email=".email";
 				xhttp.open("POST", url, true);
 				
 				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -70,10 +70,8 @@
 		<input type="text" name="lname" id="lname"><br>
 		<label for="email">Email:</label><br>
 		<input type="email" name="email" id="email" required=""><br>
-		<script>
-			const data = [fname, lname, email];
-		</script>
-		<button type="button" onclick="loadPostDoc(data)">Request data with POST</button>
+
+		<button type="button" onclick="loadPostDoc(fname, lname, email)">Request data with POST</button>
     
 </div></body>
 </html>
