@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<body>
+		<script>
+			function loadGetDoc() {
+			  var xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+			   if (this.readyState == 1 ) {
+						document.getElementById("ready1").innerHTML =
+						"Readystate = 1 and server connection established";
+				   }
+					 if (this.readyState == 2 ) {
+						document.getElementById("ready2").innerHTML =
+						"Readystate = 2 and Request has been received.";
+				   }
+					 if (this.readyState == 3 ) {
+						document.getElementById("ready3").innerHTML =
+						"Readystate = 3 and Request is being processed.";
+				   }
+					 if (this.readyState == 4 ) {
+						
+						document.getElementById("ready4").innerHTML =
+						"Readystate = 4 and Request finished and Response is ready. ";
+				   }
+				if (this.readyState == 4 && this.status == 200) {
+				  document.getElementById("test").innerHTML = this.responseText;
+				  document.getElementById("callback").innerHTML = "This is my callback trigger";
+				}
+			  };
+			  xhttp.open("GET", "testdoc.txt", true);
+			  xhttp.send();
+			}
+			function loadPostDoc() {
+				var xhttp = new XMLHttpRequest();
+				var url = 'form.php';
+				var params = "fname=first&lname=last&email=email@mail";
+				xhttp.open("POST", url, true);
+				
+				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						document.getElementById("demo").innerHTML = this.responseText;
+					}
+				};
+				
+				
+				xhttp.send(params);
+			}
+		</script>
+
+		<a href="index.html">Home</a>
+		<h2>AJAX using GET method</h2>
+		<button type="button" onclick="loadGetDoc()">Server Response</button>
+		<h3>AJAX responses from the server</h3>
+		<div id="ready1"></div>
+		<div id="ready2"></div>
+		<div id="ready3"></div>
+		<div id="ready4"></div>
+		<p id="test"></p>
+		<p id="callback"></p>
+		<div id="demo"><br><br>
+
+		<h2>AJAX using POST method</h2>
+
+		<label for="fname">First name:</label><br>
+		<input type="text" name="fname"><br>
+		<label for="lname">Last name:</label><br>
+		<input type="text" name="lname"><br>
+		<label for="email">Email:</label><br>
+		<input type="email" name="email" required=""><br>
+
+		<button type="button" onclick="loadPostDoc()">Request data with POST</button>
+    
+</div></body>
+</html>
