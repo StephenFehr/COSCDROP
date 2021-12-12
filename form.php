@@ -1,18 +1,25 @@
-<html>
-    <head>
-        <title>New User Input</title>
-        <style>
-            body{background-color:bisque;}
-            h1{font: 28px;}
-            table, th, td {
-              border: 1px solid black;
-              background-color: Ivory;
-              font: 28px;
-              color: blue;
-            }
-        </style>
-    </head>
-    <body>
+
+<!DOCTYPE html>
+<HTML>
+      <head>
+          <title>Form</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="style.css">
+      </head>
+  <body>
+    <img id="titleImage" src="images/Banner_image.jpg" alt="Banner">
+    <br>
+    <div class="header">
+          <a href="index.html">Home</a>
+          <a href="validatealert.html">Validate Alert</a>
+          <a href="formvalidation.html">Validate Text</a>
+          <a href="form.html">New User</a>
+          <a href="report.php">Report of Database</a>
+          <a href="AJAX.html">Ajax Example</a>
+    </div>
+        <br><br>
+    <h2>Form Entered</h2>
 
 <?php
 	
@@ -66,6 +73,5 @@ mysqli_close($conn);
 ?>
 
 		<a href="report.php">Print out report of database</a></br>
-		<a href="index.html"><strong>Home</strong></a>
     </body>
 </html>
