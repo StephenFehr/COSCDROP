@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Form</title>
+		<style>
+			body{background-color:bisque;}
+		</style>
+		<script>
+		function validateForm() {
+		  let x = document.forms["myForm"]["fname"].value;
+		  let y = document.forms["myForm"]["lname"].value;
+		  if (x == "") {
+			alert("First name must be filled out");
+			return false;
+		  }else if(y == "") {
+			alert("Last name must be filled out");
+			return false;
+		  }
+		}		
+		</script>
+	</head>
+	<body>
+		<h1>Back to <a href="index.html"><strong>Home</strong></a></h1>
+		<h2>User Information:</h2>
+
+		<form name="myForm" action="form.php" onsubmit="return validateForm()" method="post">
+			<label for="fname">First name:</label><br>
+			<input type="text" name="fname" id="fname"><br>
+			
+			<label for="lname">Last name:</label><br>
+			<input type="text" name="lname" id="lname"><br>
+			
+			<label for="email">Email:</label><br>
+			<input type="email" name="email" required="" id="email"><br><br>
+			
+			<label for="phone">Telephone:</label>
+			<input type="tel" name="phone" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+			<br><br>
+			
+			<input type="submit" value="Submit">
+		</form>
+		<h2><a href="report.php"><strong>REPORT: Output of all table rows</strong></a></h2>
+	
+</body></html>
