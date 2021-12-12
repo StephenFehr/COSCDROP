@@ -1,19 +1,25 @@
-<html>
-	<head>
-		<title>Database List</title>
-			<style>
-            body{background-color:bisque;}
-            h1{font: 28px;}
-            table, th, td {
-              border: 1px solid black;
-              background-color: Ivory;
-              font: 28px;
-              color: blue;
-            }
-     	</style>
-	</head>
-	<body>
-		<h1>Back to <a href="index.html"><strong>Home</strong></a></h1>
+
+<!DOCTYPE html>
+<HTML>
+      <head>
+          <title>Home Page</title>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="style.css">
+      </head>
+  <body>
+    <img id="titleImage" src="images/Banner_image.jpg" alt="Banner">
+    <br>
+    <div class="header">
+          <a href="index.html">Home</a>
+          <a href="validatealert.html">Validate Alert</a>
+          <a href="formvalidation.html">Validate Text</a>
+          <a href="form.html">New User</a>
+          <a href="report.php" style="pointer-events: none;">Report of Database</a>
+          <a href="AJAX.html">Ajax Example</a>
+    </div>
+        <br><br>
+	  <h2>Report of Database</h2>
 	<?php 		
 
 $DBName = "coscdrop";
