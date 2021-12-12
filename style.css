@@ -1,15 +1,7 @@
-/*
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
-*/
-/* 
-    Created on : Nov. 28, 2021, 7:48:54 p.m.
-    Author     : david
-*/
 
 body {
     font-family: Tahoma, Helvetica, sans-serif;
-    background-color: bisque;
+    background-color: DarkGray;
 }
 
 .logo img, h1 {
