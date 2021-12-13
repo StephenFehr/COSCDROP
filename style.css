@@ -42,15 +42,8 @@ body {
 	margin: 5px;
 	color: #333;
 }
-.caption {
-	opacity: 0.8;
-	background:#cae5c1;
-	width: 290px;
-	position: absolute;
-	bottom: 0px;
-	padding: 5px;
-	color: red;
-}
+
+.donuts .caption {display: none;position: absolute;bottom: 0px;padding: 5px;background:#cae5c1;width: 290px;opacity: 0.8;}
 
 tr, td, th {
     border-style: inset;
