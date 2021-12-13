@@ -46,7 +46,7 @@ if (!$conn) {
 $select = mysqli_query($conn, "SELECT `email` FROM `users` WHERE `email` = '".$targetemail."'") or exit(mysqli_error($connectionID));
 if(mysqli_num_rows($select)) {
     echo "This email is already being used";
-    echo "<a href='form.html'>Try Again?</a></br>";
+    echo "<br><br><a href='form.html'>Try Again?</a></br>";
     exit();
 }
 	  
