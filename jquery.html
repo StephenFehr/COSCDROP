@@ -7,7 +7,14 @@
           <link rel="stylesheet" href="style.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
           <script>
-                
+          $(document).ready(function() {
+           $('.donuts').hover(function(){
+		$('.image-caption',this).slideToggle('fast');
+	      }, function(){
+		$('.image-caption',this).slideToggle('fast');
+           });
+          });
+		  
         //Choco-Sprink
         $(document).ready(function(){
           $("#chocoSprink").hover(function(){
@@ -52,13 +59,7 @@
               $(this).css({opacity: 1.0}, 500);
             });
           });
-          $(document).ready(function() {
-           $('.donuts').hover(function(){
-		$('.image-caption',this).slideToggle('fast');
-	      }, function(){
-		$('.image-caption',this).slideToggle('fast');
-           });
-          });
+
               
         </script> 
       </head>
