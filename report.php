@@ -17,6 +17,7 @@
           <a href="form.html">New User</a>
           <a href="report.php" style="pointer-events: none;">Report of Database</a>
           <a href="AJAX.html">Ajax Example</a>
+	  <a href="jquery.html">JQuery Example</a>
     </div>
         <br><br>
 	  <h2>Report of Database</h2>
