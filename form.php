@@ -43,7 +43,11 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-	    
+$select = mysqli_query($connectionID, "SELECT `email` FROM `users` WHERE `email` = '".$targetemail."'") or exit(mysqli_error($connectionID));
+if(mysqli_num_rows($select)) {
+    exit('This email is already being used');
+}
+	  
 $sql = "INSERT INTO $tablename (fname, lname, email,phone)
 VALUES ('$targetfname', '$targetlname', '$targetemail', '$targetphone')";
 
