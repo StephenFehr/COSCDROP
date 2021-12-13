@@ -45,7 +45,8 @@ if (!$conn) {
 
 $select = mysqli_query($conn, "SELECT `email` FROM `users` WHERE `email` = '".$targetemail."'") or exit(mysqli_error($connectionID));
 if(mysqli_num_rows($select)) {
-    exit("This email is already being used".<a href='report.html'>Try Again?</a></br>);
+    echo "<a href='report.html'>Try Again?</a></br>";
+    exit("This email is already being used");
 }
 	  
 $sql = "INSERT INTO $tablename (fname, lname, email,phone)
