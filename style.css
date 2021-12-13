@@ -65,7 +65,7 @@ body {
   font-size: 18px;
 }
 
-button.card {
+card.button {
   border: none;
   outline: 0;
   display: inline-block;
@@ -74,7 +74,7 @@ button.card {
   background-color: #000;
   text-align: center;
   cursor: pointer;
-  width: 100%;
+
   font-size: 18px;
 }
 
