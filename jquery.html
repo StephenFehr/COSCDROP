@@ -7,60 +7,22 @@
           <link rel="stylesheet" href="style.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
           <script>
+		  
           $(document).ready(function() {
-           $('.donuts').hover(function(){
+           $(".donuts").hover(function(){
 		$('.image-caption',this).slideToggle('fast');
 	      }, function(){
 		$('.image-caption',this).slideToggle('fast');
            });
           });
-		  
-        //Choco-Sprink
-        $(document).ready(function(){
-          $("#chocoSprink").hover(function(){
+	  $(document).ready(function(){
+           $('.donuts').hover(function(){
             $(this).css('opacity', '0.6');
             }, function () {
               $(this).css({opacity: 1.0}, 500);
             });
-         });
-           //Harbin Y-12
-           $(document).ready(function(){
-            $("#vanSprink").hover(function(){
-             $(this).css({opacity: 0.6}, 500);
-             }, function () {
-              $(this).css({opacity: 1.0}, 500);
-            });
-          });
-           $(document).ready(function(){
-            $("#sugarGlaze").hover(function(){
-             $(this).css({opacity: 0.6}, 500);
-             }, function () {
-              $(this).css({opacity: 1.0}, 500);
-            });
-          });
-          $(document).ready(function(){
-            $("#plain").hover(function(){
-             $(this).css({opacity: 0.6}, 500);
-             }, function () {
-              $(this).css({opacity: 1.0}, 500);
-            });
-          });
-          $(document).ready(function(){
-            $("#chocoCronut").hover(function(){
-             $(this).css({opacity: 0.6}, 500);
-             }, function () {
-              $(this).css({opacity: 1.0}, 500);
-            });
-          });
-           $(document).ready(function(){
-            $("#pistachio").hover(function(){
-             $(this).css({opacity: 0.6}, 500);
-             }, function () {
-              $(this).css({opacity: 1.0}, 500);
-            });
-          });
-
-              
+         });	  
+    
         </script> 
       </head>
   <body>
