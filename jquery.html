@@ -52,6 +52,13 @@
               $(this).css({opacity: 1.0}, 500);
             });
           });
+          $(document).ready(function() {
+           $('.donuts').hover(function(){
+		$('.image-caption',this).slideToggle('fast');
+	      }, function(){
+		$('.image-caption',this).slideToggle('fast');
+           });
+          });
               
         </script> 
       </head>
@@ -75,13 +82,29 @@
       <p>jQuery is the most widely-used JavaScript library, and is used in more than half of all major websites. It's motto is "write less, do more...!"</p>
     </div>
         
-    <div class="donuts">
+    <div class="Donuts">
             <img id="chocoSprink" src="images/chocoSprink.jpg" alt="Choco-Sprink" style="width: 300px; height: 200px;">
+            <div class="caption"> Chocolate Sprinkle Donut </div>
+    </div>
+    <div class="Donuts">
             <img id="vanSprink" src="images/vanSprink.jpg" alt="van-Sprink" style="width: 300px; height: 200px;">
+            <div class="caption">Vanilla Sprinkle Donut </div>
+    </div>
+    <div class="Donuts">
             <img id="sugarGlaze" src="images/sugarGlaze.jpg" alt="Sugar-Glaze" style="width: 300px; height: 200px;">
+            <div class="caption">Sugar Glazed Donut </div>
+    </div>
+    <div class="Donuts">
             <img id="pistachio" src="images/pistachio.jpg" alt="Pistachio" style="width: 300px; height: 200px;">
+            <div class="caption">Pistachio Donut </div>
+    </div>
+    <div class="Donuts">
             <img id="chocoCronut" src="images/chocoCronut.jpg" alt="Choco-Cronut" style="width: 300px; height: 200px;">
+            <div class="caption">Chocolate Cronut </div>
+    </div>
+    <div class="Donuts">
             <img id="plain" src="images/plain.jpg" alt="Plain" style="width: 300px; height: 200px;">
+            <div class="caption">Plain Donut </div>
     </div>
         
   </body>
