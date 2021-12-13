@@ -4,11 +4,6 @@ body {
     background-color: sienna;
 }
 
-.logo img, h1 {
-    font-size: 30px;
-    display: inline-block;
-}
-
 .header {
     float: right;
 }
@@ -39,37 +34,6 @@ body {
     margin-left: auto;
     width: 100%;
     height: 50%;
-}
-
-.aircraftType {
-    display: inline-block;   
-}
-
-.schedule p {
-    display: inline-block;
-}
-
-#arrivals {
-    float: left;
-    font-size: 20px;
-    font-weight: bold;
-    padding-left: 200px;
-}
-
-#departures {
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-    padding-right: 200px;
-}
-
-.booking p {
-    display: inline;
-    text-size: 15px;
-}
-
-.booking #formA #formB {
-    display: inline-block;
 }
 
 tr, td, th {
