@@ -13,12 +13,12 @@
           <script>
 		  
           $(document).ready(function() {
-           $(".donuts").hover(function(){
-		$('.image-caption',this).slideToggle('fast');
-	      }, function(){
-		$('.image-caption',this).slideToggle('fast');
+            $('.donuts').hover(function(){
+		$('.caption',this).slideToggle('slow');
+	        }, function(){
+		$('.caption',this).slideToggle('slow');
            });
-          });
+          }); 
 	  $(document).ready(function(){
            $('.donuts').hover(function(){
             $(this).css('opacity', '0.6');
